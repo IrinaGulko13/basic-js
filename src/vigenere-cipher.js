@@ -1,13 +1,24 @@
 class VigenereCipheringMachine {
-    encrypt() {
-        throw 'Not implemented';
-        // remove line with error and write your code here
+    constructor (val){
+        this.val = val;
     }
-
-    decrypt() {
-        throw 'Not implemented';
-        // remove line with error and write your code here
+    encrypt (message, key) {
+        if(!message||!key){
+            throw new Error();
     }
+    let mes = message.toUpperCase();
+    let keyword = key.toUpperCase();
+    let result = '';
+    
 }
 
+    decrypt (message,key) {
+        if(!message||!key){
+            throw new Error();
+    }
+    let mes = message.toUpperCase();
+    let keyword = key.toUpperCase();
+    let result = '';
+}
+}
 module.exports = VigenereCipheringMachine;
