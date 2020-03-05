@@ -8,6 +8,9 @@ class VigenereCipheringMachine {
     }
     let mes = message.toUpperCase();
     let mesArr = mes.split('');
+    if (this.reverse !== undefined) {
+        mesArr = mesArr.reverse();
+    }
     let keyword = key.toUpperCase();
     let keyArr = keyword.split('');
     let alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
@@ -29,9 +32,9 @@ class VigenereCipheringMachine {
     return val;
     });
     let word = newWord.join('')
-    if (this.isReverse) {
-        return word.reverse();
-    }
+    // if (this.isReverse) {
+    //     return word.reverse();
+    // }
         return word;
    }
    
@@ -43,6 +46,9 @@ class VigenereCipheringMachine {
 
     let mes = message.toUpperCase();
     let mesArr = mes.split('');
+    if (this.reverse !== undefined) {
+        mesArr = mesArr.reverse();
+    }
     let keyword = key.toUpperCase();
     let keyArr = keyword.split('');
     let alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
@@ -64,10 +70,10 @@ class VigenereCipheringMachine {
     return val;
     });
     let word = newWord.join('')
-    if (this.isReverse) {
-        return word.reverse();
-    }
+    // if (this.isReverse) {
+    //     return word.reverse();
+    // }
      return word;
-   }
+  }
 } 
 module.exports = VigenereCipheringMachine;
